@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data</title>
+</head>
+<body>
+    <h3>Form Data</h3>
+    <br>
+    
+    <div>First Name : <span id="first-name"></span> </div>
+    <br>
+
+    <div>Last Name : <span id="last-name"></span> </div>
+    <br>
+    
+    <div>Phone Number : <span id="phone-Number"></span> </div>
+    <br>
+
+    <div>Mail Id : <span id="mail-id-value"></span> </div>
+    <br>
+    
+    <div>State : <span id="state-value"></span> </div>
+    <br>
+
+    <script>
+        const firstName= window.localStorage.getItem('first-name');
+        const lastName= window.localStorage.getItem('last-name');
+        const PHONE= window.localStorage.getItem('Phone-Number');
+        const MAIL= window.localStorage.getItem('Mail-Id');
+        const STATE= window.localStorage.getItem('State-val');
+
+        document.getElementById('first-name').textContent = firstName;
+        document.getElementById('last-name').textContent = lastName;
+        document.getElementById('phone-Number').textContent = PHONE;
+        document.getElementById('mail-id-value').textContent = MAIL;        
+        document.getElementById('state-value').textContent = STATE;
+    
+    </script>
+</body>
+</html>

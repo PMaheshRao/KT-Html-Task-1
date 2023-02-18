@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Task 1</title>
+    
+</head>
+<body>
+    <!-- Heading -->
+    <h5>1. Heading</h5>
+    <h1>I am Mahesh</h1>
+   
+    <hr>
+    <!-- Paragrapgh about me -->
+    <h5>2. Paragraph About Me</h5>
+    <p>I live in Jharkhand, India. Currently I am pursuing B. Tech. From RVS College Of Engineering & Technology, Jamshedpur in specialization Computer Science Engineering.I am passionate about coding, technology, and love creating ambitious projects with positive people.
+    I like to spend my time learning new skills. I have few hobbies like playing Basketball, playing Chess, watching Anime and learning about new Technology. I have some good qualities like , I am Well-organised , hardworking , problem solver , development enthusiast kind of person. </p>
+    
+    <hr>
+    <!-- Nature Image  -->
+    <h5>3. Image</h5>
+    <h3>Nature Image</h3>
+    <img src="wallpaper 01.jpg" alt="Image of Mountains" width="500px" height="100%">
+    
+    <hr>
+    <h5>4. Github Link</h5>
+    <!-- Github Link -->
+    <b>Github Link : <a href="https://github.com/PMaheshRao" title="Github PMaheshRao" style="text-decoration: none;">Click me !!!</a></b>
+    
+    <hr>
+    <!-- Programming language that I know -->
+    <h5>5. List</h5>
+    <h3>Programming Language I Know</h3>
+    
+    <ul>
+        <li>C</li>
+        <li>C++</li>
+        <li>Jave</li>
+        <li>Html</li>
+        <li>Css</li>
+    </ul>
+
+    <hr>
+    <!-- Table with personal data -->
+    <h5>6. Table</h5>
+    <h3>Data Table</h3>
+    <table border="2px">
+        <thead>
+            <td> Name </td>
+            <td> Place </td>
+            <td> Age </td>
+            <td> college </td>
+            <td> Department </td>
+        </thead>
+        <tbody>
+            <tr>
+                <td> Mahesh </td>
+                <td> Jamshedpur </td>
+                <td> 21 </td>
+                <td> RVSCET, Jsr </td>
+                <td> CSE </td>
+            </tr>
+            <tr>
+                <td> Mahesh </td>
+                <td> Jamshedpur </td>
+                <td> 21 </td>
+                <td> RVSCET, Jsr </td>
+                <td> CSE </td>
+            </tr><tr>
+                <td> Mahesh </td>
+                <td> Jamshedpur </td>
+                <td> 21 </td>
+                <td> RVSCET, Jsr </td>
+                <td> CSE </td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <hr>
+
+    <!-- Form tag use-->
+    <h5>7. Form Information</h5>
+    <h3>Form Information</h3>
+    
+    <form id="form">
+
+        <h4>Name : </h4>
+        
+        <label for="firstName">First Name : </label>
+        <input type="text" id="firstName">
+        <br><br>
+        
+        <label for="lastName">Last Name : </label>
+        <input type="text" id="lastName">
+        <br><br>
+
+        <label for="phone">Phone No.: </label>
+        <input type="number" id="phone">
+        <br><br>
+                
+        <label for="mailId">Mail id : </label>
+        <input type="email" id="mailId">
+        <br><br>
+                
+        <label for="State">State : </label>
+        <input type="text" id="State">
+        <br><br>
+                
+        <input type="submit">
+    </form>
+<br>
+<hr>
+
+<!-- Js for showing detail in another page -->
+
+<script>
+    const form = document.getElementById('form'); 
+    const firstname = document.getElementById('firstName');
+    const lastname = document.getElementById('lastName');
+    const Phone = document.getElementById('phone'); 
+    const MailId = document.getElementById('mailId');
+    const state = document.getElementById('State');
+
+    form.addEventListener('submit',function(d){
+        d.preventDefault(); //restrict from pre submission
+
+        const firstnamevalue = firstname.value;
+        const lastnamevalue = lastname.value;
+        const PhoneNumber = Phone.value;
+        const MailIdvalue = MailId.value;
+        const Statevalue = state.value;
+
+        //store data in locastorage
+        window.localStorage.setItem('first-name',firstnamevalue);
+        window.localStorage.setItem('last-name',lastnamevalue);
+        window.localStorage.setItem('Phone-Number',PhoneNumber);
+        window.localStorage.setItem('Mail-Id',MailIdvalue);
+        window.localStorage.setItem('State-val',Statevalue);
+
+        //Calling next page
+        window.location.href = "display.html";
+         
+    })
+</script>
+
+
+</body>
+</html>
